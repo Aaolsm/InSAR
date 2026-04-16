@@ -1,44 +1,43 @@
-# Stage Plan
+# 分阶段任务书
 
-## Stage Overview
+## 阶段 0：项目初始化
+目标：
+- 完成目录结构搭建
+- 建立 Git/GitHub 管理
+- 建立任务书与日志文件
 
-| Stage | Objective | Start | End | Status |
-| --- | --- | --- | --- | --- |
-| Stage 1 | Literature review and requirements |  |  | Not started |
-| Stage 2 | Data collection and preprocessing |  |  | Not started |
-| Stage 3 | InSAR processing and analysis |  |  | Not started |
-| Stage 4 | Visualization and validation |  |  | Not started |
-| Stage 5 | Writing and final delivery |  |  | Not started |
+## 阶段 1：数据认知与坐标统一
+目标：
+- 检查 shp/dbf/shx/prj 完整性
+- 读取 obj 与 shp
+- 完成 WGS84 到 HK80 的统一
+- 按给定角点裁剪小区域
 
-## Current Stage
+## 阶段 2：建筑—InSAR 空间匹配
+目标：
+- 将 InSAR 点匹配到建筑轮廓
+- 形成建筑级统计表
 
-- Active stage:
-- Stage owner:
-- Stage goal:
+## 阶段 3：建筑级几何指标提取
+目标：
+- 提取高度、朝向、立面表面积、面积、周长、面积周长比
 
-## Milestones
+## 阶段 4：街区指标提取
+目标：
+- 提取建筑密度、容积率等宏观指标
 
-| Milestone | Description | Planned Date | Actual Date | Status |
-| --- | --- | --- | --- | --- |
-| M01 |  |  |  | Not started |
-| M02 |  |  |  | Not started |
-| M03 |  |  |  | Not started |
+## 阶段 5：可用性指标建模
+目标：
+- 构建建筑级 InSAR 可用性指标体系
 
-## Weekly Plan
+## 阶段 6：统计分析
+目标：
+- 分析城市形态对可用性的影响规律
 
-| Week | Focus | Planned Tasks | Output |
-| --- | --- | --- | --- |
-| W1 |  |  |  |
-| W2 |  |  |  |
-| W3 |  |  |  |
+## 阶段 7：风险分级
+目标：
+- 构建建筑安全风险分级模型
 
-## Checkpoints
-
-- Data ready:
-- Processing pipeline ready:
-- Validation ready:
-- Writing ready:
-
-## Notes
-
-Add stage-specific adjustments, dependencies, and blockers here.
+## 阶段 8：论文与答辩
+目标：
+- 输出论文、专题图和答辩材料

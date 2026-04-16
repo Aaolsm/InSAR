@@ -1,30 +1,29 @@
-# InSAR
+# 城市密集建筑群 InSAR 监测可用性量化评估与安全风险分级研究
 
-Graduation project workspace for InSAR data processing, analysis, and documentation.
+## 项目简介
+本项目用于完成毕业设计，研究内容围绕城市密集建筑群中 InSAR 监测可用性评估、建筑几何指标提取以及建筑安全风险分级展开。
 
-## Structure
+## 当前目标
+1. 构建建筑几何属性—InSAR 监测质量—时序形变综合数据库
+2. 提取建筑级几何指标与街区级形态指标
+3. 分析城市形态对 InSAR 监测可用性的影响
+4. 建立建筑安全风险分级模型
+5. 输出专题图、论文与答辩材料
 
-- `data/raw`: raw input data
-- `data/interim`: intermediate results
-- `data/processed`: cleaned or final analysis-ready data
-- `data/external`: external reference data
-- `src`: source code
-- `notebooks`: experiments and analysis notebooks
-- `outputs/figures`: exported figures
-- `outputs/tables`: exported tables
-- `outputs/maps`: exported maps
-- `docs/taskbook`: task planning and execution records
-- `docs/notes`: progress notes and working logs
-- `tests`: test code
+## 当前阶段
+阶段 0：项目初始化与数据整理
 
-## Working Notes
+## 目录说明
+- `data/`：数据目录
+- `src/`：源码目录
+- `docs/`：任务书、笔记、日志
+- `outputs/`：图表、地图、结果输出
+- `notebooks/`：实验记录
+- `tests/`：测试代码
 
-- Keep raw data read-only whenever possible.
-- Put reusable logic in `src` instead of notebooks.
-- Track plans in `docs/taskbook` and daily progress in `docs/notes`.
-
-## Key Docs
-
-- `docs/taskbook/master_taskbook.md`
-- `docs/taskbook/stage_plan.md`
-- `docs/notes/progress_log.md`
+## 备注
+当前项目优先完成：
+- 仓库结构搭建
+- 数据读入验证
+- 坐标系统一
+- 小区域裁剪

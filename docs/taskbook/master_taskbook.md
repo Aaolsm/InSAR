@@ -1,49 +1,66 @@
-# Master Taskbook
+# 毕设总任务书
 
-## Project Info
+## 题目
+城市密集建筑群 InSAR 监测可用性量化评估与安全风险分级研究
 
-- Project:
-- Topic:
-- Owner:
-- Advisor:
-- Start date:
-- Target finish date:
+## 总目标
+构建一个可复现的研究流程，实现：
+1. InSAR 点云与建筑轮廓的空间匹配
+2. 建筑级几何指标提取
+3. 城市形态对 InSAR 可用性的统计分析
+4. 结合形变与可用性的建筑安全风险分级
+5. 输出论文、图件、代码仓库与过程记录
 
-## Main Goal
+## 研究数据
+- InSAR LOS 点数据（shp/dbf/shx/prj）
+- 建筑轮廓数据（shp）
+- 建筑三维模型（obj）
+- 辅助空间数据
 
-Briefly describe the final research or engineering goal of this InSAR project.
+## 已知技术约束
+- `.obj` 使用 open3d 读取
+- `.shp` 使用 geopandas 读取
+- 研究小区域角点范围由 WGS84 给出
+- 因 `.obj` 默认坐标系为 HK80，需先统一到 HK80
 
-## Deliverables
+## 核心模块
+### 模块 A：综合数据库构建
+建立“建筑几何属性—监测质量指标—时序形变数据”综合数据库
 
-| ID | Deliverable | Description | Due Date | Status |
-| --- | --- | --- | --- | --- |
-| D01 |  |  |  | Not started |
-| D02 |  |  |  | Not started |
-| D03 |  |  |  | Not started |
+### 模块 B：建筑级几何指标提取
+提取以下指标：
+- 建筑高度
+- 朝向
+- 立面表面积
+- 建筑轮廓周长
+- 建筑轮廓面积
+- 面积周长比
 
-## Task List
+### 模块 C：街区级指标提取
+- 建筑密度
+- 容积率
+- 街道宽高比
+- 邻近建筑关系
 
-| ID | Task | Owner | Priority | Stage | Status | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| T01 |  |  | High |  | Not started |  |
-| T02 |  |  | Medium |  | Not started |  |
-| T03 |  |  | Low |  | Not started |  |
+### 模块 D：InSAR 可用性指标构建
+- 建筑内有效点数
+- 点密度
+- 高质量点比例
+- 可观测覆盖率
+- 综合可用性指标
 
-## Risks
+### 模块 E：统计分析
+- 相关性分析
+- 回归分析
+- 敏感性分析
+- 规律识别
 
-| ID | Risk | Impact | Mitigation | Status |
-| --- | --- | --- | --- | --- |
-| R01 |  |  |  | Open |
-| R02 |  |  |  | Open |
+### 模块 F：风险分级
+构建“形变 × 可用性”二维风险矩阵，输出建筑风险等级
 
-## Decisions
-
-| Date | Decision | Reason |
-| --- | --- | --- |
-| YYYY-MM-DD |  |  |
-
-## Next Actions
-
-1. Clarify the research scope.
-2. Confirm data sources and preprocessing route.
-3. Break the work into stage plans.
+## 最终成果
+- InSAR 监测可用性分布图
+- 城市建筑安全风险分级图
+- 统计图表
+- 论文
+- GitHub 仓库全过程记录
